@@ -23,7 +23,7 @@ public class GuiFrame extends JFrame implements KeyListener, WindowListener  {
 	public boolean closed = false;
 	public boolean fullscreen = false;
 	private SaveData saveData;
-	public boolean saved;
+	public boolean saved = true;
 
 	public GuiFrame(SaveData savedata) {
 		super("GUI Creator");

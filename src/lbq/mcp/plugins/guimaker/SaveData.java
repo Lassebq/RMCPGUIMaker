@@ -7,6 +7,7 @@ import java.nio.file.Path;
 
 import org.mcphackers.mcp.MCP;
 import org.mcphackers.mcp.MCPPaths;
+import org.mcphackers.mcp.TaskParameter;
 
 import lbq.mcp.plugins.guimaker.GuiButton.Anchor;
 
@@ -142,7 +143,8 @@ public class SaveData {
 	}
 	
 	private class SaveWriter extends BufferedWriter {
-		private int indent = 0; 
+		private int indent = 0;
+		private String indString = mcp.getOptions().getStringParameter(TaskParameter.INDENTION_STRING);
 		
 		public SaveWriter(BufferedWriter out) {
 			super(out);
@@ -150,7 +152,7 @@ public class SaveData {
 		
 		private void appendInd(StringBuilder s) {
 			for(int i = 0; i < indent; i++) {
-				s.append("\t");
+				s.append(indString);
 			}
 		}
 		

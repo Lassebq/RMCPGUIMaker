@@ -22,5 +22,9 @@ public class PluginGuiMaker implements MCPPlugin {
 	@Override
 	public void onMCPEvent(MCPEvent event, MCP mcp) {
 	}
+
+	@Override
+	public void setTaskOverrides(Task task) {
+	}
 	
 }

@@ -13,7 +13,7 @@ public class TaskGuiMaker extends Task {
 	}
 
 	@Override
-	protected void doTask() throws Exception {
+	public void doTask() throws Exception {
 		Path p = Paths.get("plugins/gui_maker.cfg");
 		SaveData savedata = new SaveData(p, mcp);
 		GuiFrame frame = new GuiFrame(savedata);
